@@ -59,8 +59,8 @@ function draw() {
 
   if (mouseIsPressed) {
 
-    image(earth, windowWidth/2, windowHeight, 1200, 700)
-    image(earth_2, windowWidth/2, windowHeight/5, 1000, 400)
+    image(earth, windowWidth / 2, windowHeight, 1200, 700)
+    image(earth_2, windowWidth / 2, windowHeight / 5, 1000, 400)
 
     //create a grid
     for (var x = 20; x < windowWidth; x += 120) {
@@ -71,19 +71,19 @@ function draw() {
         // var remapy = map(distance, 0, 300, 0, 20);
 
         rectMode(CENTER);
-        noStroke()
 
+        noStroke()
         fill((Math.random() * 255), (Math.random() * 255), 255)
-        rect(x, y , volume/3, volume/3)
+        rect(x, y, volume / 3, volume / 3)
 
 
 
         noStroke()
-        fill((Math.random() * 255),  255, (Math.random() * 255))
-        rect(x, y + cos(t) * 30, volume/8, volume/8)
-        rect(x, y + sin(t) * 30, volume/8, volume/8)
-        rect(x+ sin(t) * 30, y, volume/8, volume/8)
-        rect(x+ cos(t) * 30, y, volume/8, volume/8)
+        fill((Math.random() * 255), 255, (Math.random() * 255))
+        rect(x, y + cos(t) * 30, volume / 8, volume / 8)
+        rect(x, y + sin(t) * 30, volume / 8, volume / 8)
+        rect(x + sin(t) * 30, y, volume / 8, volume / 8)
+        rect(x + cos(t) * 30, y, volume / 8, volume / 8)
       }
     }
 
@@ -105,8 +105,8 @@ function draw() {
 
   } else {
 
-    image(earth_3, windowWidth/2, windowHeight, 1200, 700)
-    image(earth_4, windowWidth/2, windowHeight/5, 1000, 400)
+    image(earth_3, windowWidth / 2, windowHeight, 1200, 700)
+    image(earth_4, windowWidth / 2, windowHeight / 5, 1000, 400)
 
     push()
     translate(width / 2, height / 2);
