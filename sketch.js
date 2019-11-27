@@ -1,4 +1,5 @@
 var t;
+var z;
 var rot;
 
 var theme;
@@ -64,12 +65,9 @@ function draw() {
   }
 
 
-
-
-
-
-
+  //keypressed "F"
   if (keyIsDown(70)) {
+
     //mouse interaction
     if (mouseIsPressed) {
 
