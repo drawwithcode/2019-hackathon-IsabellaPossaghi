@@ -28,7 +28,7 @@ function preload() {
   earth_2 = loadImage("./assets/EARTH_2.jpg")
   earth_3 = loadImage("./assets/EARTH_3.jpg")
   earth_4 = loadImage("./assets/EARTH_4.jpg")
-  earth_enter = loadImage("./assets/earth_enter.jpg")
+  earth_enter = loadImage("./assets/EARTH_enter.jpg")
 }
 
 function setup() {
