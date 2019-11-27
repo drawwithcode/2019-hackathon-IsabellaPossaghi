@@ -1,6 +1,5 @@
 var t;
 var z;
-var rot;
 
 var theme;
 var analyzer;
@@ -129,13 +128,13 @@ function draw() {
       rotate(frameCount / 180);
       rot = frameCount / 180;
 
-      image(tg1_bianco, 0, 0 + sin(z1/5) * 1, 340, 230);
-      image(tg1_nero, 0, 0 + sin(z1/5) * -10, 340, 230);
-      image(tg1_bianco, 0, 0 + sin(z1/5) * -20, 340, 230);
-      image(tg1_nero, 0, 0 + sin(z1/5) * -30, 340, 230);
-      image(tg1_bianco, 0, 0 + sin(z1/5) * -40, 340, 230);
-      image(tg1_nero, 0, 0 + sin(z1/5) * -50, 340, 230);
-      image(tg1_bianco, 0, 0 + sin(z1/5) * -60, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z1 / 5) * 1, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z1 / 5) * -10, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z1 / 5) * -20, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z1 / 5) * -30, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z1 / 5) * -40, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z1 / 5) * -50, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z1 / 5) * -60, 340, 230);
 
       pop()
 
@@ -145,12 +144,12 @@ function draw() {
       fill(255, 0, 244)
       drawingContext.font = "Share Tech Mono";
       drawingContext.textAlign = "center";
-      text(myText, width / 2, height /2);
+      text(myText, width / 2, height / 2);
     }
   } else {
 
     //mini earth
-    image(earth_enter,width/2,height/2,300,300)
+    image(earth_enter, width / 2, height / 2, 300, 300)
 
     //text
     var myText = "Press F to enter"
@@ -159,7 +158,7 @@ function draw() {
     fill(255)
     drawingContext.font = "Share Tech Mono";
     drawingContext.textAlign = "center";
-    text(myText, width / 2, height /2);
+    text(myText, width / 2, height / 2);
   }
 
 
