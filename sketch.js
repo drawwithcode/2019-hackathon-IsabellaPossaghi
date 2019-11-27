@@ -7,9 +7,9 @@ var analyzer;
 
 function preload() {
 
-  _t = loadImage("./assets/t.png");
-  g = loadImage("./assets/g.png");
-  _1 = loadImage("./assets/1.png");
+  // _t = loadImage("./assets/t.png");
+  // g = loadImage("./assets/g.png");
+  // _1 = loadImage("./assets/1.png");
 
   tg1 = loadImage("./assets/TG1.png");
   tg1_y = loadImage("./assets/TG1_yellow.png");
@@ -17,6 +17,11 @@ function preload() {
   tg1_g = loadImage("./assets/TG1_green.png");
   tg1_n = loadImage("./assets/TG1_black.png");
   tg1_p = loadImage("./assets/TG1_purple.png");
+
+  tg1_nero = loadImage("./assets/TG1_noir.png");
+  tg1_bianco = loadImage("./assets/TG1_white.png");
+
+  //sound
   theme = loadSound("./assets/TG1_new.mp3");
 
   earth = loadImage("./assets/earth.jpg")
@@ -39,8 +44,10 @@ function setup() {
 function draw() {
   background(0);
 
-
+  //timevariables
+  //t variable fot TG1 logo
   t = t + 0.15;
+  //z variables for little squares
   z = z + 0.05;
 
   var volume = 0;
@@ -57,15 +64,21 @@ function draw() {
 
 
 
+
+
+
+
+  //mouse interaction
   if (mouseIsPressed) {
 
     image(earth, windowWidth / 2, windowHeight, 1200, 700)
     image(earth_2, windowWidth / 2, windowHeight / 5, 1000, 400)
 
-    //create a grid
+    //create a grid of little squares
     for (var x = 20; x < windowWidth; x += 120) {
       for (var y = 20; y < windowHeight; y += 120) {
 
+        //mouse position interaction ????
         // var distance = dist(x,y,mouseX,mouseY);
         // var remapx = map(distance, 0, 300, 0, 10);
         // var remapy = map(distance, 0, 300, 0, 20);
@@ -98,7 +111,7 @@ function draw() {
     image(tg1_b, 0, 0 + sin(z) * -30, 340, 230);
     image(tg1_p, 0, 0 + sin(z) * -40, 340, 230);
     image(tg1_g, 0, 0 + sin(z) * -50, 340, 230);
-    image(tg1, 0, 0 + sin(z) * -60, 340, 230);
+    image(tg1_nero, 0, 0 + sin(z) * -60, 340, 230);
 
     pop()
 
@@ -113,19 +126,24 @@ function draw() {
     rotate(frameCount / 180);
     rot = frameCount / 180;
 
-    image(tg1_n, 0, 0 + sin(z) * 1, 340, 230);
-    image(tg1_b, 0, 0 + sin(z) * -10, 340, 230);
-    image(tg1_y, 0, 0 + sin(z) * -20, 340, 230);
-    image(tg1_b, 0, 0 + sin(z) * -30, 340, 230);
-    image(tg1_p, 0, 0 + sin(z) * -40, 340, 230);
-    image(tg1_g, 0, 0 + sin(z) * -50, 340, 230);
-    image(tg1, 0, 0 + sin(z) * -60, 340, 230);
+    image(tg1_bianco, 0, 0 + sin(z) * 1, 340, 230);
+    image(tg1_nero, 0, 0 + sin(z) * -10, 340, 230);
+    image(tg1_bianco, 0, 0 + sin(z) * -20, 340, 230);
+    image(tg1_nero, 0, 0 + sin(z) * -30, 340, 230);
+    image(tg1_bianco, 0, 0 + sin(z) * -40, 340, 230);
+    image(tg1_nero, 0, 0 + sin(z) * -50, 340, 230);
+    image(tg1_bianco, 0, 0 + sin(z) * -60, 340, 230);
 
     pop()
   }
 
 }
 
+
+
+
+
+//adapt to window size
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
