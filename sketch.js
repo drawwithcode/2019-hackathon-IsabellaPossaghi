@@ -119,14 +119,15 @@ function draw() {
 
     } else {
 
+
       image(earth_3, windowWidth / 2, windowHeight, 1200, 700)
       image(earth_4, windowWidth / 2, windowHeight / 5, 1000, 400)
 
 
       push()
       translate(width / 2, height / 2);
-      rotate(frameCount / 90);
-      rot = frameCount / 90;
+      rotate(frameCount / 180);
+      rot = frameCount / 180;
 
       image(tg1_bianco, 0, 0 + sin(z1/5) * 1, 340, 230);
       image(tg1_nero, 0, 0 + sin(z1/5) * -10, 340, 230);
@@ -137,12 +138,21 @@ function draw() {
       image(tg1_bianco, 0, 0 + sin(z1/5) * -60, 340, 230);
 
       pop()
+
+      var myText = "Hold F + Click"
+      textFont("Share Tech Mono");
+      textSize(50);
+      fill(255, 0, 244)
+      drawingContext.font = "Share Tech Mono";
+      drawingContext.textAlign = "center";
+      text(myText, width / 2, height /2);
     }
   } else {
 
+    //mini earth
     image(earth_enter,width/2,height/2,300,300)
 
-
+    //text
     var myText = "Press F to enter"
     textFont("Share Tech Mono");
     textSize(50);
