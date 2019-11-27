@@ -67,81 +67,87 @@ function draw() {
 
 
 
+  if (keyIsDown(70)) {
+    //mouse interaction
+    if (mouseIsPressed) {
 
-  //mouse interaction
-  if (mouseIsPressed) {
+      image(earth, windowWidth / 2, windowHeight, 1200, 700)
+      image(earth_2, windowWidth / 2, windowHeight / 5, 1000, 400)
 
-    image(earth, windowWidth / 2, windowHeight, 1200, 700)
-    image(earth_2, windowWidth / 2, windowHeight / 5, 1000, 400)
+      //create a grid of little squares
+      for (var x = 20; x < windowWidth; x += 120) {
+        for (var y = 20; y < windowHeight; y += 120) {
 
-    //create a grid of little squares
-    for (var x = 20; x < windowWidth; x += 120) {
-      for (var y = 20; y < windowHeight; y += 120) {
+          //mouse position interaction ????
+          // var distance = dist(x,y,mouseX,mouseY);
+          // var remapx = map(distance, 0, 300, 0, 10);
+          // var remapy = map(distance, 0, 300, 0, 20);
 
-        //mouse position interaction ????
-        // var distance = dist(x,y,mouseX,mouseY);
-        // var remapx = map(distance, 0, 300, 0, 10);
-        // var remapy = map(distance, 0, 300, 0, 20);
+          rectMode(CENTER);
 
-        rectMode(CENTER);
-
-        noStroke()
-        fill((Math.random() * 255), (Math.random() * 255), 255)
-        rect(x, y, volume / 3, volume / 3)
+          noStroke()
+          fill((Math.random() * 255), (Math.random() * 255), 255)
+          rect(x, y, volume / 3, volume / 3)
 
 
 
-        noStroke()
-        fill((Math.random() * 255), 255, (Math.random() * 255))
-        rect(x, y + cos(t) * 30, volume / 8, volume / 8)
-        rect(x, y + sin(t) * 30, volume / 8, volume / 8)
-        rect(x + sin(t) * 30, y, volume / 8, volume / 8)
-        rect(x + cos(t) * 30, y, volume / 8, volume / 8)
+          noStroke()
+          fill((Math.random() * 255), 255, (Math.random() * 255))
+          rect(x, y + cos(t) * 30, volume / 8, volume / 8)
+          rect(x, y + sin(t) * 30, volume / 8, volume / 8)
+          rect(x + sin(t) * 30, y, volume / 8, volume / 8)
+          rect(x + cos(t) * 30, y, volume / 8, volume / 8)
+        }
       }
+
+      push()
+      translate(width / 2, height / 2);
+      rotate(frameCount / 180);
+      rot = frameCount / 180;
+
+      image(tg1_n, 0, 0 + sin(z) * 1, 340, 230);
+      image(tg1_b, 0, 0 + sin(z) * -10, 340, 230);
+      image(tg1_y, 0, 0 + sin(z) * -20, 340, 230);
+      image(tg1_b, 0, 0 + sin(z) * -30, 340, 230);
+      image(tg1_p, 0, 0 + sin(z) * -40, 340, 230);
+      image(tg1_g, 0, 0 + sin(z) * -50, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z) * -60, 340, 230);
+
+      pop()
+
+
+    } else {
+
+      image(earth_3, windowWidth / 2, windowHeight, 1200, 700)
+      image(earth_4, windowWidth / 2, windowHeight / 5, 1000, 400)
+
+      push()
+      translate(width / 2, height / 2);
+      rotate(frameCount / 180);
+      rot = frameCount / 180;
+
+      image(tg1_bianco, 0, 0 + sin(z) * 1, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z) * -10, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z) * -20, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z) * -30, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z) * -40, 340, 230);
+      image(tg1_nero, 0, 0 + sin(z) * -50, 340, 230);
+      image(tg1_bianco, 0, 0 + sin(z) * -60, 340, 230);
+
+      pop()
     }
-
-    push()
-    translate(width / 2, height / 2);
-    rotate(frameCount / 180);
-    rot = frameCount / 180;
-
-    image(tg1_n, 0, 0 + sin(z) * 1, 340, 230);
-    image(tg1_b, 0, 0 + sin(z) * -10, 340, 230);
-    image(tg1_y, 0, 0 + sin(z) * -20, 340, 230);
-    image(tg1_b, 0, 0 + sin(z) * -30, 340, 230);
-    image(tg1_p, 0, 0 + sin(z) * -40, 340, 230);
-    image(tg1_g, 0, 0 + sin(z) * -50, 340, 230);
-    image(tg1_nero, 0, 0 + sin(z) * -60, 340, 230);
-
-    pop()
-
-
   } else {
-
-    image(earth_3, windowWidth / 2, windowHeight, 1200, 700)
-    image(earth_4, windowWidth / 2, windowHeight / 5, 1000, 400)
-
-    push()
-    translate(width / 2, height / 2);
-    rotate(frameCount / 180);
-    rot = frameCount / 180;
-
-    image(tg1_bianco, 0, 0 + sin(z) * 1, 340, 230);
-    image(tg1_nero, 0, 0 + sin(z) * -10, 340, 230);
-    image(tg1_bianco, 0, 0 + sin(z) * -20, 340, 230);
-    image(tg1_nero, 0, 0 + sin(z) * -30, 340, 230);
-    image(tg1_bianco, 0, 0 + sin(z) * -40, 340, 230);
-    image(tg1_nero, 0, 0 + sin(z) * -50, 340, 230);
-    image(tg1_bianco, 0, 0 + sin(z) * -60, 340, 230);
-
-    pop()
+    var myText = "Press F to enter"
+    textFont("Share Tech Mono");
+    textSize(50);
+    fill(255)
+    drawingContext.font = "Share Tech Mono";
+    drawingContext.textAlign = "center";
+    text(myText, width / 2, height /2);
   }
 
+
 }
-
-
-
-
 
 //adapt to window size
 function windowResized() {
