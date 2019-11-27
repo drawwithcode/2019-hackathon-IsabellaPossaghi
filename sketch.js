@@ -24,10 +24,10 @@ function preload() {
   //sound
   theme = loadSound("./assets/TG1_new.mp3");
 
-  earth = loadImage("./assets/earth.jpg")
-  earth_2 = loadImage("./assets/earth_2.jpg")
-  earth_3 = loadImage("./assets/earth_3.jpg")
-  earth_4 = loadImage("./assets/earth_4.jpg")
+  earth = loadImage("./assets/EARTH.jpg")
+  earth_2 = loadImage("./assets/EARTH_2.jpg")
+  earth_3 = loadImage("./assets/EARTH_3.jpg")
+  earth_4 = loadImage("./assets/EARTH_4.jpg")
   earth_enter = loadImage("./assets/earth_enter.jpg")
 }
 
