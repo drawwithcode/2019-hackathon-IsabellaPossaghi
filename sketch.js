@@ -7,9 +7,6 @@ var analyzer;
 
 function preload() {
 
-  // _t = loadImage("./assets/t.png");
-  // g = loadImage("./assets/g.png");
-  // _1 = loadImage("./assets/1.png");
 
   tg1 = loadImage("./assets/TG1.png");
   tg1_y = loadImage("./assets/TG1_yellow.png");
